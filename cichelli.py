@@ -1,4 +1,4 @@
-############################ Cichelli Method Phase 1 ###################
+### Cichelli's Method Phase 1: Scoring words ###
 
 # getting unique words, put them in unique list
 with open("MLKSpeechP1.txt", "r") as file:
@@ -77,7 +77,7 @@ def calc_index(word):
 
 
 
-############################ Cichelli Method Phase 2 and 3 : creating the hash table ###################
+### Cichelli's Method Phase 2: Creating the hash table ###
 
 i = 0
 while i < size: # while there are less than 'size' number of filled hash_table slots, mess with the g values of the current word; 'i' is the # of filled slots and also the index for the current word
@@ -146,12 +146,12 @@ while i < size: # while there are less than 'size' number of filled hash_table s
                 
         g_firsts[ordered_list[i][0]] += 1 # try next g_first for prev word
 
-######################### Constructed Hash Table ########################
+### Constructed hash table ###
 # for key, value in hash_table.items():
 #     print(f"{key}: {value}")
 
 
-############################ Reading file for keywords ###################
+### Reading file for keywords ###
 total_lines = 0
 total_words = 0
 word_counter = {x:0 for x in hash_table.values()}
